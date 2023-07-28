@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="column open" data-status="open">
+        <h5 class="column-title">Open</h5>
+        <div class="drag-element" draggable="true" id="task-1">Task 1</div>
+        <div class="drag-element" draggable="true" id="task-2">Task 2</div>
+        <div class="drag-element" draggable="true" id="task-3">Task 3</div>
+        <div class="drag-element" draggable="true" id="task-4">Task 4</div>
+      </div>
+      <div class="column in-progress" data-status="in-progress">
+        <h5 class="column-title">In Progress</h5>
+      </div>
+      <div class="column resolved" data-status="resolved">
+        <h5 class="column-title">Resolved</h5>
+      </div>
+      <div class="column testing" data-status="testing">
+        <h5 class="column-title">Testing</h5>
+      </div>
+      <div class="column done" data-status="done">
+        <h5 class="column-title">Done</h5>
+      </div>
+      <div class="column closed" data-status="closed">
+        <h5 class="column-title">Closed</h5>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
