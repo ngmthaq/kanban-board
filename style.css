@@ -19,7 +19,6 @@
   overflow-y: scroll;
   flex-shrink: 0;
   background-color: rgb(54, 54, 54);
-  padding-top: 40px;
   position: relative;
   border: 1px solid black;
 }
@@ -51,7 +50,7 @@
   justify-content: center;
   height: 40px;
   user-select: none;
-  position: absolute;
+  position: sticky;
   width: 100%;
   top: 0;
 }

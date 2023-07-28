@@ -19,6 +19,11 @@ let positionConfigs = {
 columns.forEach((column) => {
   column.ondragover = (event) => {
     event.preventDefault();
+    if (event.clientY < 100) {
+      column.scrollTo(0, column.scrollTop - 16);
+    } else if (column.clientHeight - event.clientY < 100) {
+      column.scrollTo(0, column.scrollTop + 16);
+    }
     column.style.borderColor = "blue";
     positionConfigs.isTransformed = false;
     positionConfigs.referenceNode = null;
@@ -62,6 +67,7 @@ columns.forEach((column) => {
           id: selectedElementConfigs.id,
           fromType: selectedElementConfigs.currentType,
           toType: column.getAttribute("data-status"),
+          updatedAt: Date.now(),
         }
       );
     }
